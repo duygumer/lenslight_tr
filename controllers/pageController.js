@@ -1,8 +1,6 @@
 // getIndexPage fonksiyonu → ana sayfayı göstermek için
 const getIndexPage = (req, res) => {
 
-    console.log("REQUEST USER:::", req.user);  // doğrulanan kullanıcı bilgilerini konsola yazdır
-
     // res.render → ejs dosyasını alıp tarayıcıya gönderir
     res.render('index', {          // views klasöründeki index.ejs dosyasını aç
         link: "index"              // index.ejs dosyasına link adında bir değişken gönderiyoruz

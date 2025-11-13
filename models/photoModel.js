@@ -1,5 +1,5 @@
-// Mongoose'u içe aktarıyoruz, çünkü MongoDB ile konuşmak için buna ihtiyacımız var
 import mongoose from "mongoose";
+
 
 // Mongoose içinden 'Schema' nesnesini alıyoruz, böylece veri şeması tanımlayabiliriz
 const { Schema } = mongoose;

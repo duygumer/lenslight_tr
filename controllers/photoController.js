@@ -1,4 +1,3 @@
-// Photo modelini alıyoruz, böylece MongoDB'deki fotoğraf verileriyle çalışabiliriz
 import Photo from '../models/photoModel.js';
 
 // createPhoto → Yeni bir fotoğraf eklemek için fonksiyon
@@ -6,8 +5,9 @@ const createPhoto = async (req, res) => {
     try {
         await Photo.create({
             name:req.body.name,
-            description: req.body.description, //dashboard.ejs deki namelere eşit olmalı 
-            
+            description: req.body.description, //dashboard.ejs deki namelere eşit olmalı
+            user: res.locals.user._id,
+
         });
 
         // Başarılıysa 201 kodu ile JSON olarak fotoğrafı döndür

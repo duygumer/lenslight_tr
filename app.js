@@ -19,8 +19,8 @@ const port = process.env.PORT;
 app.set("view engine", "ejs");
 
 // static files middleware
-app.use(cookieParser());
-app.use(checkUser);
+
+
 app.use(express.static(`public`));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -28,6 +28,7 @@ app.use(cookieParser());
 
 
 //routes
+app.use(checkUser);
 app.use("/", pageRoute);
 app.use("/photos", photoRoute);
 app.use("/users", userRoute);
