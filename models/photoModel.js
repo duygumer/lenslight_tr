@@ -30,6 +30,10 @@ const photoSchema = new mongoose.Schema({
   user:{
     type:Schema.Types.ObjectId,
     ref:"User", // user modal ına referans vereceğiz(satır 51 deki user a eşit olmalı)
+  },
+  url: {
+    type: String,
+    required: true,
   }
 });
 
